@@ -25,6 +25,21 @@ _Work in progress toward the next tagged release._
 
 ---
 
+## [0.8.0] — 2026-05-29 — QA fixes + credibility cleanup
+
+### Fixed
+- **Amendments routes restored.** `/amendments`, `/amendments/propose`, and `/amendments/[id]`
+  were 404ing because the page files never reached disk; all four files now committed. Every
+  "Propose"/"See all amendments" button across the issue pages works again.
+- **Missing `IssueAmendments` component** added (issue pages were failing to build).
+
+### Changed
+- **Candidate Accountability:** removed placeholder "Sample Representative" cards (fabricated
+  grades undercut the sourced-receipts credibility) and replaced with an honest "being built —
+  the right way" treatment that keeps the promise visible without fake data.
+
+---
+
 ## [0.7.0] — 2026-05-28 — Two Parties, Same Demons
 
 ### Added

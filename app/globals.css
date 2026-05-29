@@ -408,3 +408,11 @@ footer{background:var(--ink);color:var(--cream);padding:60px 0 34px}
 .receipt-who{font-family:'Libre Caslon Display',serif;font-size:15px;color:var(--ink);text-align:right}
 .receipt-claim{font-size:13.5px;line-height:1.6;color:var(--ink);margin-bottom:16px}
 .receipt .stat-source{color:var(--gold);border-top:1px solid var(--hair);padding-top:10px;display:block}
+
+/* ============ CANDIDATE ACCOUNTABILITY — coming soon ============ */
+.cand-soon{border:1px dashed var(--hair);background:linear-gradient(160deg,rgba(255,255,255,.03),transparent);padding:48px 40px;text-align:center;max-width:760px;margin:0 auto}
+.cand-soon-seal{font-size:30px;color:var(--red);margin-bottom:14px}
+.cand-soon h3{font-size:clamp(22px,3vw,30px);color:var(--parchment-2);margin-bottom:16px}
+.cand-soon p{font-size:15px;line-height:1.7;color:var(--cream);max-width:600px;margin:0 auto 14px}
+.cand-soon p b{color:var(--gold-light)}
+.cand-soon-note{font-size:13px;color:var(--gold);font-style:italic}

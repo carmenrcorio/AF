@@ -29,7 +29,7 @@ export default function Home() {
               <p className="lede rv d3">The system is rigged — and both parties profit from keeping it that way. <b>America First: The Only Way</b> is a constitution-respecting, citizen-built plan to end the corruption, hold every official accountable, and put working Americans ahead of lobbies, donors, and global corporations.</p>
               <div className="cta-row rv d4">
                 <Link href="/plan" className="btn btn-red">Read the Plan</Link>
-                <Link href="/#join" className="btn btn-ghost">Propose an Amendment</Link>
+                <Link href="/amendments/propose" className="btn btn-ghost">Propose an Amendment</Link>
               </div>
             </div>
             <div className="pledge-card rv d5">
@@ -174,21 +174,12 @@ export default function Home() {
             <h2>Know the right people. Support them — wherever you live.</h2>
             <p>An honest scorecard for every representative and candidate. We grade them against the Plan, show who funds them, and link straight to the records — so cleaning house starts with knowing who&rsquo;s in the house.</p>
           </div>
-          <div className="cand-row">
-            <div className="cc">
-              <div className="grade a">A</div><h4>Sample Representative</h4><div className="sub">District · Party</div>
-              <div className="meta"><div><span>America First Score</span><span>92 / 100</span></div><div><span>LibertyScore</span><span>View ↗</span></div><div><span>Foreign-PAC Money</span><span>$0 · Clean</span></div></div>
-            </div>
-            <div className="cc">
-              <div className="grade q">?</div><h4>Sample Candidate</h4><div className="sub">Open Seat · Running 2026</div>
-              <div className="meta"><div><span>America First Score</span><span>Pending</span></div><div><span>LibertyScore</span><span>View ↗</span></div><div><span>Funding Review</span><span>In Progress</span></div></div>
-            </div>
-            <div className="cc">
-              <div className="grade f">F</div><h4>Sample Incumbent</h4><div className="sub">District · Party</div>
-              <div className="meta"><div><span>America First Score</span><span>14 / 100</span></div><div><span>Stock Trades</span><span>Flagged</span></div><div><span>Foreign-PAC Money</span><span>Tracked ↗</span></div></div>
-            </div>
+          <div className="cand-soon">
+            <div className="cand-soon-seal">★</div>
+            <h3>The scorecard is being built — the right way.</h3>
+            <p>We&rsquo;re not posting a single rating until it&rsquo;s real and sourced. Every profile will grade officials against the Plan and link straight to the records — <b>LibertyScore</b>, <b>TrackAIPAC</b>, and public <b>FEC filings</b> — so you can verify every claim yourself. No placeholders, no fabricated grades. That&rsquo;s the whole point of this movement.</p>
+            <p className="cand-soon-note">Want to help research your district? Verified members will be able to contribute. Join below.</p>
           </div>
-          <p className="src-note">Profiles curated and sourced by our research team. External ratings link out to <b>LibertyScore</b> and money-tracking data to <b>TrackAIPAC</b> and public FEC filings — every claim is verifiable at its source.</p>
         </div>
       </section>
 
@@ -200,7 +191,7 @@ export default function Home() {
           <p>Verify with your phone, propose amendments, and vote on the ones that should become law. A movement for a new generation of Americans who are done being sold out — and ready to build something better.</p>
           <div className="cta-row">
             <span className="btn btn-cream">Create Your Account</span>
-            <Link href="/issues" className="btn btn-outline-w">Explore the Issues</Link>
+            <Link href="/amendments" className="btn btn-outline-w">See Open Amendments</Link>
           </div>
         </div>
       </section>
