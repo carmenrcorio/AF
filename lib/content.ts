@@ -346,9 +346,7 @@ export const STATS: Record<string, Stat[]> = {
     { value: '86%', label: 'Americans who support banning members of Congress from trading individual stocks', source: 'U.S. Senate (Moody–Gillibrand release)', url: 'https://www.gillibrand.senate.gov/?p=38452', note: 'Jan 2026' },
     { value: '88', label: 'Profitable large U.S. corporations that paid zero federal income tax in their most recent year, despite $105B+ in U.S. profits', source: 'Institute on Taxation and Economic Policy', url: 'https://itep.org/88-profitable-corporations-paid-zero-income-tax-in-2025/', note: '2025' },
     { value: '9%', label: 'Average effective federal tax rate paid by profitable large corporations in 2018 — down from 16% in 2014, after the statutory rate was cut from 35% to 21%', source: 'U.S. Government Accountability Office', url: 'https://www.gao.gov/products/gao-23-105384' },
-
   ],
-
   climate: [
     { value: '~74M', label: 'Americans — more than a fifth of the country — exposed to elevated industrial cancer risk from toxic air', source: 'ProPublica analysis of EPA data ("Poison in the Air")', url: 'https://www.propublica.org/article/toxmap-poison-in-the-air' },
     { value: '79%', label: 'Black Americans are 79% more likely than white Americans to live where industrial pollution is highest', source: 'The Climate Reality Project', url: 'https://www.climaterealityproject.org/sacrifice-zones' },
@@ -416,5 +414,13 @@ export const ISSUE_RECEIPTS: Record<string, Receipt[]> = {
     { side: 'Both', who: 'Four presidents, one untouched loophole', claim: 'The carried-interest loophole lets investment managers pay the ~20% capital-gains rate instead of ordinary income rates up to 37%. Bush, Obama, Trump, and Biden all promised to close it. None did.', source: 'NOTUS', url: 'https://www.notus.org/money/trump-wall-street-tax-carried-interest-loophole-reconciliation' },
     { side: 'Republican', who: 'The 2017 Tax Cuts & Jobs Act', claim: 'Republicans claimed the TCJA would fix carried interest, but the three-year holding rule they wrote exempts virtually all private-equity deals (held 5–7 years). The loophole survived after heavy PE lobbying.', source: 'Americans for Financial Reform', url: 'https://ourfinancialsecurity.org/resources/close-the-carried-interest-loophole-that-is-a-tax-dodge-for-super-rich-private-equity-executives/' },
     { side: 'Democrat', who: 'The 2022 Inflation Reduction Act', claim: 'Democrats promised to close the loophole, then stripped the provision to win Sen. Sinema’s vote — after she took ~$2M from the securities and investment industry. “Hats off to the P/E lobby,” a former Goldman CEO mocked.', source: 'CNBC', url: 'https://www.cnbc.com/2022/08/09/how-wall-street-wooed-sen-kyrsten-sinema-and-preserved-its-multi-billion-dollar-carried-interest-tax-break.html' },
+  ],
+  climate: [
+    { side: 'Republican', who: 'The oil & gas industry, 2024', claim: 'The fossil fuel industry spent about $219 million on the 2024 election — roughly 88% of candidate money to Republicans — then got the drilling and deregulation bills it paid for. A 2019 study found the money rewards lawmakers who already vote the industry’s way.', source: 'Yale Climate Connections', url: 'https://yaleclimateconnections.org/2025/01/the-fossil-fuel-industry-spent-219-million-to-elect-the-new-u-s-government/' },
+    { side: 'Democrat', who: 'Sen. Joe Manchin (D)', claim: 'Manchin chaired the Senate Energy Committee while earning roughly $500K a year from his family coal company (stake worth $1–5M) and helped strip climate provisions from Democrats’ own bill. A government-ethics watchdog called it “a classic case study for a conflict of interest.”', source: 'Florida Phoenix / States Newsroom', url: 'https://floridaphoenix.com/2023/07/11/manchin-earned-476k-in-2022-from-family-coal-company-congressional-disclosures-show/' },
+  ],
+  immigration: [
+    { side: 'Democrat', who: 'President Obama, “deporter-in-chief”', claim: 'Obama oversaw record deportations — roughly 3 million+ — and expanded the detention and enforcement machine that later administrations inherited. The infrastructure of mass detention was built across both parties, not one.', source: 'ACLU', url: 'https://www.aclu.org/news/immigrants-rights/deporter-chief' },
+    { side: 'Both', who: 'The for-profit detention system', claim: 'About 90% of ICE detainees are held in private or contracted facilities — a system that pays out to the same prison corporations no matter which party holds power. Detention is a business, and both parties have kept it open.', source: 'Detention Watch Network', url: 'https://www.detentionwatchnetwork.org/issues/detention-101' },
   ],
 }

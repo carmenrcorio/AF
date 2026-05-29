@@ -25,6 +25,29 @@ _Work in progress toward the next tagged release._
 
 ---
 
+## [0.10.0] — 2026-05-29 — Even-handedness, wave 2 (Climate + Immigration)
+
+### Added
+- **"Both Sides Feed This"** receipts on two more issues:
+  - **Climate** — fossil fuel money ($219M in 2024, ~88% to GOP) vs. Sen. Manchin chairing
+    Energy while earning ~$500K/yr from his family coal company ("classic conflict of interest"
+    per a govt-ethics watchdog). Framed honestly: the money is NOT 50/50, but the capture is real
+    on both sides.
+  - **Immigration** — Obama "deporter-in-chief" (~3M+ deportations, built the detention machine)
+    + the for-profit detention system (~90% private/contracted) that pays out regardless of party.
+
+### Verified this pass
+- Confirmed the pre-existing Climate/Schools/Rights "By the Numbers" stats are accurately sourced
+  (e.g. NAEP: 45% of 12th graders below Basic in math, the worst on record — confirmed via the
+  National Assessment Governing Board).
+
+### Notes
+- Remaining issues for the even-handedness pass: Healthcare, Guns, Justice, Schools, Rights.
+  The culture-war ones (Schools, Rights) will get receipts that reflect the *real* shared
+  dynamic (the outrage industry profiting) rather than a forced policy symmetry.
+
+---
+
 ## [0.9.0] — 2026-05-29 — Even-handedness, wave 1 (Government) + tax stats
 
 ### Added
