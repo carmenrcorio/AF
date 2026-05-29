@@ -25,6 +25,27 @@ _Work in progress toward the next tagged release._
 
 ---
 
+## [0.11.0] — 2026-05-29 — Even-handedness, wave 3 (Healthcare + Guns + Justice)
+
+### Added
+- **"Both Sides Feed This"** receipts on three more issues:
+  - **Healthcare** — PhRMA spends $500M+/yr and funds both parties near-equally (Pfizer\u2019s
+    network gave to the GOP and Dem Senate committees at similar levels); dark-money gifts flow
+    to GOP- and Dem-aligned groups alike. Reform crawls; both sides cash the checks.
+  - **Guns** — a peer-reviewed study found NRA donations spike in the very counties hit by school
+    shootings, while gun-control groups raise record sums off the same tragedies. Both sides
+    monetize the fear cycle.
+  - **Justice** — the 1994 Crime Bill (Biden-written, Clinton-signed, GOP votes) was, per the
+    ACLU, the moment "both parties fully embraced" the policies that drove mass incarceration.
+
+### Even-handedness pass status
+- 6 of 8 issues now have receipts: Government, Climate, Immigration, Healthcare, Guns, Justice.
+- Remaining: **Schools** and **Rights** \u2014 the culture-war pair. These will get receipts that
+  reflect the *real* shared dynamic (operatives/media fundraising off the conflict) rather than a
+  forced policy symmetry, and should be reviewed before they lock.
+
+---
+
 ## [0.10.0] — 2026-05-29 — Even-handedness, wave 2 (Climate + Immigration)
 
 ### Added
