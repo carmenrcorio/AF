@@ -24,7 +24,7 @@ export default function Nav() {
           <Link href="/common-ground">Common Ground</Link>
           <Link href="/constitution">Constitution</Link>
         </div>
-        <Link href="/#join" className="btn btn-red">Join the Movement</Link>
+        <Link href="/join" className="btn btn-red">Join the Movement</Link>
       </nav>
     </header>
   )
