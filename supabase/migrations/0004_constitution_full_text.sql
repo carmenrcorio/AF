@@ -1,0 +1,8 @@
+-- Full verbatim Constitution + plain-language, transcribed from the U.S. National
+-- Archives official transcription (archives.gov). 49 provisions:
+-- Preamble, 21 Article sections, 27 Amendments. Loaded via Supabase in four batches
+-- (preamble+ArticleI, ArticlesII-VII, Bill of Rights, Amendments 11-27).
+-- See the production database for the authoritative seed; this file documents that the
+-- constitution_provisions table was fully populated at this migration point.
+-- (Text omitted here for length; it is identical to the rows in production and was
+--  applied through migrations constitution_preamble_article1 ... constitution_amendments_11_27.)

@@ -305,7 +305,7 @@ footer{background:var(--ink);color:var(--cream);padding:60px 0 34px}
 .fld{display:block;margin-bottom:16px}
 .fld span{display:block;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);margin-bottom:7px}
 .fld span em{font-style:normal;font-weight:400;text-transform:none;letter-spacing:0;color:var(--slate)}
-.fld input,.fld select{width:100%;padding:13px 14px;border:1px solid var(--hair);background:#fff;font-family:'Public Sans';font-size:15px;color:var(--ink)}
+.fld input,.fld select{width:100%;padding:13px 14px;border:1px solid var(--hair);background:#fff;font-family:'Public Sans';font-size:15px;color:var(--ink);border-radius:0}
 .fld input:focus,.fld select:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(178,34,52,.12)}
 .fld-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .auth-btn{width:100%;padding:15px;margin-top:8px;text-align:center;display:block}
@@ -315,3 +315,69 @@ footer{background:var(--ink);color:var(--cream);padding:60px 0 34px}
 .auth-link{background:none;border:none;color:var(--gold);font-family:'Public Sans';font-size:13px;font-weight:600;cursor:pointer;margin-top:16px;display:block;width:100%;text-align:center}
 .auth-link:hover{color:var(--red)}
 .auth-seal{font-size:34px;color:var(--red);margin-bottom:10px}
+
+/* ============ AMENDMENTS ============ */
+.fld textarea{width:100%;padding:13px 14px;border:1px solid var(--hair);background:#fff;font-family:'Public Sans';font-size:15px;line-height:1.5;color:var(--ink);resize:vertical}
+.fld textarea:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(178,34,52,.12)}
+.fld-hint{display:block;margin-top:7px;font-size:12px;line-height:1.5;color:var(--gold);font-style:italic}
+
+.review{border-top:1px solid var(--hair);margin-bottom:8px}
+.rv-row{display:grid;grid-template-columns:130px 1fr;gap:18px;padding:16px 0;border-bottom:1px solid var(--hair)}
+.rv-k{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--red);padding-top:3px}
+.rv-v{font-size:14.5px;line-height:1.6;color:var(--ink)}
+.rv-title{font-family:'Libre Caslon Display',serif;font-size:19px}
+@media(max-width:600px){.rv-row{grid-template-columns:1fr;gap:5px}}
+
+.empty-state{text-align:center;border:1px dashed var(--gold);background:rgba(176,141,76,.06);padding:54px 30px}
+.empty-state h3{font-size:26px;margin-bottom:10px}
+.empty-state p{font-size:15px;color:var(--slate);max-width:460px;margin:0 auto;line-height:1.6}
+
+.amend-card{display:block;border:1px solid var(--hair);background:var(--parchment-2);padding:26px 28px;margin-bottom:14px;transition:all .25s}
+.amend-card:hover{background:#fff;transform:translateY(-2px);box-shadow:0 20px 40px -28px rgba(11,27,51,.4)}
+.amend-tag{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.amend-card h3{font-size:22px;margin:8px 0 8px;color:var(--ink)}
+.amend-prob{font-size:14px;line-height:1.6;color:var(--slate);margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.amend-tally{display:flex;gap:18px;font-size:12.5px;font-weight:600;letter-spacing:.04em}
+.t-for{color:#3F7D3F}.t-against{color:var(--red)}.t-abstain{color:var(--slate)}
+
+.votebox{background:var(--ink);color:var(--parchment-2);padding:30px 30px;margin-bottom:40px;border-left:3px solid var(--red)}
+.vote-counts{display:flex;gap:34px;margin-bottom:22px}
+.vc{display:flex;flex-direction:column}
+.vc-n{font-family:'Libre Caslon Display',serif;font-size:34px;line-height:1}
+.vc-l{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--cream);opacity:.7;margin-top:4px}
+.vote-btns{display:flex;gap:12px;flex-wrap:wrap}
+.vbtn{font-family:'Public Sans';font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:13px 26px;border:1px solid var(--hair);background:transparent;color:var(--parchment-2);cursor:pointer;transition:all .2s}
+.vbtn:hover{border-color:var(--gold-light)}
+.vbtn.vote-for.active{background:#3F7D3F;border-color:#3F7D3F;color:#fff}
+.vbtn.vote-against.active{background:var(--red);border-color:var(--red);color:#fff}
+.vbtn.vote-abstain.active{background:var(--slate);border-color:var(--slate);color:#fff}
+.vote-gate{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.vote-gate p{font-size:14px;color:var(--cream);margin:0;flex:1;min-width:220px}
+.vote-note{font-size:12px;color:var(--gold-light);margin-top:14px}
+
+.amend-detail{margin-top:8px}
+.ad-block{border-top:1px solid var(--hair);padding:24px 0}
+.ad-block p{font-size:16px;line-height:1.7;color:var(--ink);font-family:'Libre Caslon Text',serif}
+.ad-objection{background:rgba(178,34,52,.05);border-left:3px solid var(--red);padding:22px 24px;margin-top:8px}
+
+.iss-amend-list{display:flex;flex-direction:column;gap:1px;background:var(--hair);border:1px solid var(--hair)}
+.iss-amend{display:flex;align-items:center;gap:14px;background:var(--parchment-2);padding:16px 20px;transition:background .2s}
+.iss-amend:hover{background:#fff}
+.ia-star{color:var(--red);font-size:11px}
+.ia-title{flex:1;font-size:14.5px;font-weight:600;color:var(--ink)}
+.ia-go{font-size:12px;color:var(--gold);font-weight:600;white-space:nowrap}
+
+/* ============ CONSTITUTION (full, data-driven) ============ */
+.const-page .wrap{max-width:780px}
+.const-group{margin-bottom:54px}
+.const-group-title{font-size:clamp(24px,3.4vw,34px);color:var(--ink);padding-bottom:14px;border-bottom:2px solid var(--red);margin-bottom:8px}
+.prov{border-bottom:1px solid var(--hair);padding:22px 0}
+.prov-head{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;background:none;border:none;cursor:pointer;text-align:left;padding:0}
+.prov-label{font-family:'Libre Caslon Display',serif;font-size:17px;color:var(--ink)}
+.prov-toggle{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red);white-space:nowrap}
+.prov-soon{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);opacity:.7;white-space:nowrap}
+.prov-original{font-family:'Libre Caslon Text',serif;font-size:17px;line-height:1.85;color:var(--ink);margin-top:12px}
+.prov-plain{margin-top:16px;padding:18px 20px;background:var(--ink);color:var(--cream);border-left:3px solid var(--red);font-size:14.5px;line-height:1.65}
+.prov-plain .tag{display:block;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-light);font-weight:700;margin-bottom:8px}
+.prov.open .prov-label{color:var(--red)}
+.const-progress{margin-top:30px;padding:16px 20px;border:1px dashed var(--gold);background:rgba(176,141,76,.07);font-size:13px;line-height:1.6;color:var(--slate)}

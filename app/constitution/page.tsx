@@ -1,11 +1,46 @@
-'use client'
-
-import { useState } from 'react'
 import Link from 'next/link'
-import { PREAMBLE } from '@/lib/content'
+import { createClient } from '@/lib/supabase/server'
+import Provision from './Provision'
 
-export default function ConstitutionPage() {
-  const [active, setActive] = useState<number | null>(null)
+export const metadata = { title: 'The Living Constitution — America First' }
+export const dynamic = 'force-dynamic'
+
+type Row = {
+  id: number
+  type: string
+  label: string
+  original_text: string
+  plain_text: string | null
+  display_order: number
+}
+
+const GROUP_ORDER = ['preamble', 'article', 'amendment', 'closing']
+const GROUP_TITLE: Record<string, string> = {
+  preamble: 'Preamble',
+  article: 'The Articles',
+  amendment: 'The Amendments',
+  closing: 'Ratification',
+}
+
+export default async function ConstitutionPage() {
+  let rows: Row[] = []
+  let dbReady = true
+  try {
+    const supabase = await createClient()
+    const { data } = await supabase
+      .from('constitution_provisions')
+      .select('id,type,label,original_text,plain_text,display_order')
+      .order('display_order', { ascending: true })
+    rows = data ?? []
+  } catch {
+    dbReady = false
+  }
+
+  const groups = GROUP_ORDER
+    .map((g) => ({ key: g, title: GROUP_TITLE[g], items: rows.filter((r) => r.type === g) }))
+    .filter((g) => g.items.length > 0)
+
+  const explained = rows.filter((r) => r.plain_text).length
 
   return (
     <>
@@ -14,37 +49,39 @@ export default function ConstitutionPage() {
           <Link href="/" className="crumb">★ Home</Link>
           <p className="kicker">The Living Constitution</p>
           <h1>The original — preserved. The meaning — made plain.</h1>
-          <p className="thesis">Read the founding document exactly as written, word for word, so there&rsquo;s never a question of its legitimacy. Tap any phrase to reveal its meaning in modern, plain English. The original is never altered — only illuminated.</p>
+          <p className="thesis">The founding document, word for word, exactly as inscribed — so its legitimacy is never in question. Tap any section marked <em>Plain English</em> to reveal its meaning in modern language. We never change the original. We only illuminate it.</p>
         </div>
       </section>
 
       <section className="const-page">
         <div className="wrap">
-          <div className="const-doc">
-            <div className="doc-label">Preamble</div>
-            <div className="preamble">
-              {PREAMBLE.map((w, i) => (
-                <span key={i} className={`pw${active === i ? ' active' : ''}`} onClick={() => setActive(i)}>
-                  {w.t}{' '}
-                </span>
+          {!dbReady && (
+            <div className="empty-state"><div className="auth-seal">★</div>
+              <h3>Connecting…</h3><p>The Constitution will appear here once the backend connection is live on this deployment.</p></div>
+          )}
+
+          {groups.map((g) => (
+            <div key={g.key} className="const-group">
+              <h2 className="const-group-title">{g.title}</h2>
+              {g.items.map((r) => (
+                <Provision key={r.id} label={r.label} original={r.original_text} plain={r.plain_text} />
               ))}
             </div>
-            <div className="plain">
-              <span className="tag">Plain English</span>
-              <span>{active === null ? 'Tap any underlined phrase above to see what it means in today\u2019s language.' : PREAMBLE[active].p}</span>
-            </div>
+          ))}
 
-            <div className="coming">
-              <b>The full text is being added next.</b> Every Article, Section, and Amendment will appear here verbatim, each paired with a plain-English explanation you can reveal the same way. We&rsquo;re entering and reviewing it carefully — the legitimacy of the document depends on getting every word exactly right.
-            </div>
-          </div>
+          {dbReady && rows.length > 0 && (
+            <p className="const-progress">
+              ★ Plain-English explanations live for {explained} of {rows.length} provisions, and growing.
+              The full original text is complete and exact, transcribed from the U.S. National Archives.
+            </p>
+          )}
         </div>
       </section>
 
       <section className="page-foot-cta">
         <div className="wrap">
-          <h3>Have an idea for an amendment?</h3>
-          <Link href="/#join" className="btn btn-red">Propose One</Link>
+          <h3>See an article worth changing?</h3>
+          <Link href="/amendments/propose" className="btn btn-red">Propose an Amendment</Link>
         </div>
       </section>
     </>

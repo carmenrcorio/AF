@@ -25,6 +25,61 @@ _Work in progress toward the next tagged release._
 
 ---
 
+## [0.5.0] — 2026-05-28 — The full Living Constitution
+
+### Added
+- Complete verbatim U.S. Constitution loaded into the database — Preamble, all 7 Articles
+  (21 sections), and all 27 Amendments — transcribed from the U.S. National Archives official
+  transcription, with the Archives credited as source on the page.
+- **Plain-English explanation for every one of the 49 provisions** (not just the Bill of Rights
+  as originally scoped — the whole document is explained).
+- Redesigned data-driven `/constitution` page: provisions grouped (Preamble / Articles /
+  Amendments), each tappable to reveal its plain-English meaning via the `Provision` component.
+  Original text is always shown and never altered.
+
+### Notes
+- Schema already supports anchoring amendments to a specific provision (`amendments.provision_id`),
+  so clause-level "propose an amendment to THIS" can be switched on next.
+
+---
+
+## [0.4.0] — 2026-05-28 — The amendment engine
+
+### Added
+- `/amendments` hub listing open proposals with live For/Against/Abstain tallies.
+- `/amendments/propose` — deliberate submission flow: six **mandatory** fields (title, issue,
+  the change, the problem, who it affects, the strongest objection) with minimum lengths and a
+  read-it-back review step before submit. Submission gated to phone-verified citizens.
+- `/amendments/[id]` detail page showing all six fields, with the strongest-objection field
+  given visual weight, plus the voting widget.
+- For / Against / Abstain voting (`VoteBox`), one vote per verified citizen, changeable anytime.
+- Per-issue amendment preview on each issue page (`IssueAmendments`).
+
+### Changed
+- Schema: amendments gain change_text/problem/affects/objection/issue_slug/provision_id;
+  votes now allow 0 (abstain); `amendment_tallies` rebuilt to count for/against/abstain.
+  (Migration 0003.)
+- Nav adds "Amendments"; homepage buttons point to the propose/hub flows.
+
+### Notes
+- provision_id is in place so amendments can anchor to specific Constitution clauses once the
+  full text is loaded (next build).
+
+---
+
+## [0.3.0] — 2026-05-28 — Phone-verified signup
+
+### Added
+- `/join` — phone-OTP signup: phone → 6-digit code → verify → profile created. The first
+  interactive feature and the foundation for comments, amendments, and voting.
+- Migration `0002_phone_verified_trigger.sql`: `phone_verified` is set server-side from
+  `auth.users` and cannot be faked by the client.
+
+### Changed
+- Nav "Join the Movement" now links to `/join`.
+
+---
+
 ## [0.2.1] — 2026-05-28 — Depth & the backend goes live
 
 ### Added
