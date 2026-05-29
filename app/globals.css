@@ -392,3 +392,19 @@ footer{background:var(--ink);color:var(--cream);padding:60px 0 34px}
 .stat-source{font-size:11px;letter-spacing:.02em;color:var(--gold);font-weight:600;border-top:1px solid var(--hair);padding-top:12px;transition:color .2s}
 .stat-source:hover{color:var(--gold-light)}
 .stat-promise{margin-top:16px;font-size:12.5px;color:var(--gold);font-style:italic}
+
+/* ============ TWO PARTIES, SAME DEMONS ============ */
+.receipts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:14px}
+@media(max-width:760px){.receipts{grid-template-columns:1fr}}
+.receipt{border:1px solid var(--hair);background:var(--parchment-2);padding:22px 20px;border-top:3px solid var(--slate)}
+.receipt.side-republican{border-top-color:#B22234}
+.receipt.side-democrat{border-top-color:#1d4e89}
+.receipt.side-both{border-top-color:var(--gold)}
+.receipt-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:12px}
+.receipt-side{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--slate)}
+.receipt.side-republican .receipt-side{color:#B22234}
+.receipt.side-democrat .receipt-side{color:#1d4e89}
+.receipt.side-both .receipt-side{color:var(--gold)}
+.receipt-who{font-family:'Libre Caslon Display',serif;font-size:15px;color:var(--ink);text-align:right}
+.receipt-claim{font-size:13.5px;line-height:1.6;color:var(--ink);margin-bottom:16px}
+.receipt .stat-source{color:var(--gold);border-top:1px solid var(--hair);padding-top:10px;display:block}

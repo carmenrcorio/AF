@@ -25,6 +25,24 @@ _Work in progress toward the next tagged release._
 
 ---
 
+## [0.7.0] — 2026-05-28 — Two Parties, Same Demons
+
+### Added
+- **"Two Parties, Same Demons"** section on the Problem/Capture page: even-handed accountability
+  showing both parties protect the rigged system, with every claim sourced.
+- `BOTH_SIDES` receipts in the content module — each with side, name, claim, source, and link.
+
+### Verification notes (why this is defensible)
+- **Both parties beat the market in 2024** (Dems ~31%, Reps ~26% vs S&P ~25%) — Unusual Whales
+  via The Hill. The "both sides" point is literally true, not rhetoric.
+- **Mike Johnson (R):** quote kept in *accurate context* — he says he supports a ban "on balance"
+  but won't bring it to a vote. Verified via The Hill + Snopes, which flagged that viral clips
+  truncate him. We deliberately did NOT use the distorted meme version.
+- **Nancy Pelosi (D):** verbatim 2021 "free-market economy" quote (CNN) + documented ~71% 2024
+  family portfolio return (Fortune/Unusual Whales).
+
+---
+
 ## [0.6.0] — 2026-05-28 — Sourcing pass (wave 1)
 
 ### Added

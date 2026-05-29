@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { PROBLEM_CLUSTERS, CAPTURE_STATS } from '@/lib/content'
+import { PROBLEM_CLUSTERS, CAPTURE_STATS, BOTH_SIDES } from '@/lib/content'
 
 export const metadata = { title: 'The Problem — America First' }
 
@@ -67,6 +67,25 @@ export default function ProblemPage() {
               ))}
             </div>
             <p className="stat-promise">★ Every figure links to its primary source.</p>
+          </div>
+
+          <div className="block">
+            <div className="block-label">Two Parties, Same Demons</div>
+            <h2>This isn&rsquo;t a left or right problem.</h2>
+            <p className="intro">The people who profit from the rigged system sit in both parties — and both protect it. We name names on all sides, and we source every word. The enemy isn&rsquo;t the other tribe; it&rsquo;s the machine both tribes feed.</p>
+            <div className="receipts">
+              {BOTH_SIDES.map((r, i) => (
+                <div className={`receipt side-${r.side.toLowerCase()}`} key={i}>
+                  <div className="receipt-head">
+                    <span className="receipt-side">{r.side}</span>
+                    <span className="receipt-who">{r.who}</span>
+                  </div>
+                  <p className="receipt-claim">{r.claim}</p>
+                  <a className="stat-source" href={r.url} target="_blank" rel="noopener noreferrer">{r.source}{r.note ? ` · ${r.note}` : ''} ↗</a>
+                </div>
+              ))}
+            </div>
+            <p className="stat-promise">★ Quotes are kept in full context and every claim links to its source. We refuse to win by distortion.</p>
           </div>
 
           <div className="principle-banner">
