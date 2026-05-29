@@ -25,6 +25,30 @@ _Work in progress toward the next tagged release._
 
 ---
 
+## [0.6.0] — 2026-05-28 — Sourcing pass (wave 1)
+
+### Added
+- **"By the Numbers"** sourced-statistics sections, each figure verified against a primary
+  source and linking out to it. Live now on: the Problem/Capture page and five issues —
+  Healthcare, Guns, Justice, Government, and Immigration.
+- `STATS` and `CAPTURE_STATS` in the content module: every entry carries value, label, source
+  name, source URL, and an as-of note.
+
+### Changed
+- Issue pages now render real cited stats where verified, and a clearer "sourcing in progress"
+  note where not yet done (Climate, Schools, Rights, and the economy detail still pending).
+
+### Notes — figures corrected against primary sources during verification
+- Maternal mortality: used CDC 2024 actual (17.9, a slight decline) rather than the brainstorm's
+  "~19 and rising."
+- Wealth concentration: used Oxfam's precise 2025 figure (billionaire wealth +81% since 2020)
+  rather than the vaguer "~40% since 2000."
+- Congressional stock trading: confirmed still legal as of Q1 2026; no full ban passed.
+- All figures sourced to CDC, Library of Congress/CRS, Pew, Johns Hopkins, Prison Policy
+  Initiative, TRAC, Detention Watch Network, Brennan Center, and Oxfam.
+
+---
+
 ## [0.5.0] — 2026-05-28 — The full Living Constitution
 
 ### Added

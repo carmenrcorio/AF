@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { PROBLEM_CLUSTERS } from '@/lib/content'
+import { PROBLEM_CLUSTERS, CAPTURE_STATS } from '@/lib/content'
 
 export const metadata = { title: 'The Problem — America First' }
 
@@ -52,6 +52,21 @@ export default function ProblemPage() {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="block">
+            <div className="block-label">By the Numbers</div>
+            <h2>The receipts.</h2>
+            <div className="stat-grid">
+              {CAPTURE_STATS.map((st, i) => (
+                <div className="stat" key={i}>
+                  <div className="stat-value">{st.value}</div>
+                  <div className="stat-label">{st.label}</div>
+                  <a className="stat-source" href={st.url} target="_blank" rel="noopener noreferrer">{st.source}{st.note ? ` · ${st.note}` : ''} ↗</a>
+                </div>
+              ))}
+            </div>
+            <p className="stat-promise">★ Every figure links to its primary source.</p>
           </div>
 
           <div className="principle-banner">

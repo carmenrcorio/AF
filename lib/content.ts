@@ -310,3 +310,46 @@ export const PREAMBLE: { t: string; p: string }[] = [
   { t: 'and secure the Blessings of Liberty to ourselves and our Posterity,', p: 'To protect freedom for ourselves now and for every generation that comes after us.' },
   { t: 'do ordain and establish this Constitution for the United States of America.', p: 'We formally create and put into effect this Constitution as the supreme law of the United States.' },
 ]
+
+// ---------------------------------------------------------------------------
+//  BY THE NUMBERS — verified figures with primary-source citations.
+//  Each stat: value, label, source name, source URL, and the year/as-of note.
+//  Only issues whose figures have been source-verified appear here; others
+//  show the "sourcing in progress" note until their pass is complete.
+// ---------------------------------------------------------------------------
+export type Stat = { value: string; label: string; source: string; url: string; note?: string }
+
+export const STATS: Record<string, Stat[]> = {
+  healthcare: [
+    { value: '17.9', label: 'U.S. maternal deaths per 100,000 live births (2024) — still among the highest of any wealthy nation', source: 'CDC / National Center for Health Statistics', url: 'https://www.cdc.gov/nchs/data/hestat/hestat113.htm', note: '2024, released March 2026' },
+    { value: '44.8', label: 'Maternal deaths per 100,000 live births for Black women — roughly triple the rate for white women (14.2)', source: 'CDC / National Center for Health Statistics', url: 'https://www.cdc.gov/nchs/data/hestat/hestat113.htm', note: '2024' },
+    { value: 'Only 1', label: 'The U.S. is the only OECD member country that guarantees no paid leave to new mothers in the private sector', source: 'Congressional Research Service (Library of Congress)', url: 'https://www.congress.gov/crs-product/R44835', note: 'as of 2024' },
+  ],
+  guns: [
+    { value: '46,728', label: 'People who died from gun-related injuries in the U.S. in 2023 — among the highest annual totals on record', source: 'Pew Research Center analysis of CDC data', url: 'https://www.pewresearch.org/short-reads/2026/04/28/what-the-data-says-about-gun-deaths-in-the-us/', note: '2023, most recent complete CDC data' },
+    { value: '~58%', label: 'Share of those gun deaths that were suicides — the majority of firearm deaths every year since 1995', source: 'Johns Hopkins Center for Gun Violence Solutions', url: 'https://publichealth.jhu.edu/2025/new-report-highlights-us-2023-gun-deaths-suicide-by-firearm-at-record-levels-for-third-straight-year', note: '2023' },
+    { value: 'Leading', label: 'Firearms remain the leading cause of death for U.S. children and teens — the 4th straight year', source: 'Johns Hopkins Center for Gun Violence Solutions', url: 'https://publichealth.jhu.edu/2025/new-report-highlights-us-2023-gun-deaths-suicide-by-firearm-at-record-levels-for-third-straight-year', note: '2023' },
+  ],
+  justice: [
+    { value: '13% vs 37%', label: 'Black Americans are about 13% of the U.S. population but roughly 37% of people in prison or jail', source: 'Prison Policy Initiative', url: 'https://www.prisonpolicy.org/research/racial_and_ethnic_disparities/', note: 'most recent national data' },
+    { value: '6x', label: 'The national incarceration rate of Black Americans is about six times the rate of white Americans', source: 'Prison Policy Initiative', url: 'https://www.prisonpolicy.org/blog/2024/04/01/updated-charts/', note: '2022 data' },
+    { value: '~2x', label: 'Native Americans are incarcerated at more than twice the rate of the population as a whole', source: 'Prison Policy Initiative', url: 'https://www.prisonpolicy.org/research/racial_and_ethnic_disparities/' },
+  ],
+  immigration: [
+    { value: '~71%', label: 'Share of people in ICE detention with no criminal conviction — a civil, not criminal, system', source: 'TRAC, Syracuse University', url: 'https://tracreports.org/immigration/quickfacts/', note: 'as of April 2026' },
+    { value: '~90%', label: 'Share of ICE detainees held in facilities operated by private prison companies or contracted jails', source: 'Detention Watch Network', url: 'https://www.detentionwatchnetwork.org/issues/detention-101', note: 'FY 2025' },
+    { value: '60,000+', label: 'People held in ICE detention daily in early 2026 — up from roughly 38,000 a year earlier', source: 'TRAC, Syracuse University', url: 'https://tracreports.org/immigration/quickfacts/', note: 'April 2026' },
+  ],
+  government: [
+    { value: 'Still legal', label: 'Members of Congress are still allowed to trade individual stocks; as of early 2026 no full ban has passed despite bipartisan bills', source: 'Roll Call', url: 'https://rollcall.com/2026/03/31/congress-stock-trading-ban-what-happened/', note: 'as of Q1 2026' },
+    { value: '~1 in 5', label: 'Share of members of Congress who traded stocks in sectors tied to their own committees (2019–2021)', source: 'Brennan Center for Justice (citing NYT investigation)', url: 'https://www.brennancenter.org/our-work/research-reports/congressional-stock-trading-explained' },
+    { value: '86%', label: 'Americans who support banning members of Congress from trading individual stocks', source: 'U.S. Senate (Moody–Gillibrand release)', url: 'https://www.gillibrand.senate.gov/?p=38452', note: 'Jan 2026' },
+  ],
+}
+
+export const CAPTURE_STATS: Stat[] = [
+  { value: 'Still legal', label: 'Members of Congress can still trade individual stocks while voting on the industries they oversee; no full ban has passed', source: 'Roll Call', url: 'https://rollcall.com/2026/03/31/congress-stock-trading-ban-what-happened/', note: 'as of Q1 2026' },
+  { value: '~1 in 5', label: 'Members of Congress who traded stocks in sectors tied to their own committees (2019–2021)', source: 'Brennan Center for Justice (citing NYT)', url: 'https://www.brennancenter.org/our-work/research-reports/congressional-stock-trading-explained' },
+  { value: '+81%', label: 'Growth in global billionaire wealth since 2020 — the fastest concentration of wealth on record', source: 'Oxfam, "Resisting the Rule of the Rich" (2025)', url: 'https://www.oxfam.org.uk/media/press-releases/billionaire-wealth-jumps-three-times-faster-in-2025-to-highest-peak-ever-sparking-dangerous-political-inequality-says-oxfam/' },
+  { value: '~90%', label: 'Share of ICE detainees held in for-profit or contracted facilities — detention as a business model', source: 'Detention Watch Network', url: 'https://www.detentionwatchnetwork.org/issues/detention-101' },
+]

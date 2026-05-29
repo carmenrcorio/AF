@@ -381,3 +381,14 @@ footer{background:var(--ink);color:var(--cream);padding:60px 0 34px}
 .prov-plain .tag{display:block;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-light);font-weight:700;margin-bottom:8px}
 .prov.open .prov-label{color:var(--red)}
 .const-progress{margin-top:30px;padding:16px 20px;border:1px dashed var(--gold);background:rgba(176,141,76,.07);font-size:13px;line-height:1.6;color:var(--slate)}
+
+/* ============ BY THE NUMBERS ============ */
+.bythenumbers{margin-top:8px}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:14px}
+@media(max-width:760px){.stat-grid{grid-template-columns:1fr}}
+.stat{border:1px solid var(--hair);background:var(--ink);color:var(--parchment-2);padding:24px 22px;border-top:3px solid var(--red);display:flex;flex-direction:column}
+.stat-value{font-family:'Libre Caslon Display',serif;font-size:34px;line-height:1.05;color:var(--gold-light)}
+.stat-label{font-size:13.5px;line-height:1.55;color:var(--cream);margin:12px 0 16px;flex:1}
+.stat-source{font-size:11px;letter-spacing:.02em;color:var(--gold);font-weight:600;border-top:1px solid var(--hair);padding-top:12px;transition:color .2s}
+.stat-source:hover{color:var(--gold-light)}
+.stat-promise{margin-top:16px;font-size:12.5px;color:var(--gold);font-style:italic}

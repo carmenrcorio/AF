@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { ISSUES, getIssue } from '@/lib/content'
+import { ISSUES, getIssue, STATS } from '@/lib/content'
+import IssueAmendments from '@/app/components/IssueAmendments'
 
 export function generateStaticParams() {
   return ISSUES.map((i) => ({ slug: i.slug }))
@@ -17,6 +18,7 @@ export default async function IssuePage({ params }: { params: Promise<{ slug: st
   const issue = getIssue(slug)
   if (!issue) notFound()
 
+  const stats = STATS[slug] ?? []
   const idx = ISSUES.findIndex((i) => i.slug === slug)
   const next = ISSUES[(idx + 1) % ISSUES.length]
 
@@ -86,10 +88,29 @@ export default async function IssuePage({ params }: { params: Promise<{ slug: st
                 <ul>{issue.fix.p3.map((x, i) => <li key={i}>{x}</li>)}</ul>
               </div>
             </div>
-            <div className="sourcing">
-              <b>By the numbers — coming soon.</b> The supporting statistics for this issue are being verified against primary sources before they go live, so every figure on this page links back to where it came from. That&rsquo;s our promise: nothing stated as fact that you can&rsquo;t check yourself.
-            </div>
+            {stats.length > 0 ? (
+              <div className="bythenumbers">
+                <div className="block-label" style={{ marginTop: 8 }}>By the Numbers</div>
+                <div className="stat-grid">
+                  {stats.map((st, i) => (
+                    <div className="stat" key={i}>
+                      <div className="stat-value">{st.value}</div>
+                      <div className="stat-label">{st.label}</div>
+                      <a className="stat-source" href={st.url} target="_blank" rel="noopener noreferrer">
+                        {st.source}{st.note ? ` · ${st.note}` : ''} ↗
+                      </a>
+                    </div>
+                  ))}
+                </div>
+                <p className="stat-promise">★ Every figure links to its primary source. If a number changes, we change it here.</p>
+              </div>
+            ) : (
+              <div className="sourcing">
+                <b>By the numbers — sourcing in progress.</b> The statistics for this issue are being verified against primary sources before they go live, so every figure links back to where it came from. Nothing is stated as fact that you can&rsquo;t check yourself.
+              </div>
+            )}
           </div>
+          <IssueAmendments slug={issue.slug} />
         </div>
       </section>
 
