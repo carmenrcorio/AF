@@ -344,6 +344,25 @@ export const STATS: Record<string, Stat[]> = {
     { value: 'Still legal', label: 'Members of Congress are still allowed to trade individual stocks; as of early 2026 no full ban has passed despite bipartisan bills', source: 'Roll Call', url: 'https://rollcall.com/2026/03/31/congress-stock-trading-ban-what-happened/', note: 'as of Q1 2026' },
     { value: '~1 in 5', label: 'Share of members of Congress who traded stocks in sectors tied to their own committees (2019–2021)', source: 'Brennan Center for Justice (citing NYT investigation)', url: 'https://www.brennancenter.org/our-work/research-reports/congressional-stock-trading-explained' },
     { value: '86%', label: 'Americans who support banning members of Congress from trading individual stocks', source: 'U.S. Senate (Moody–Gillibrand release)', url: 'https://www.gillibrand.senate.gov/?p=38452', note: 'Jan 2026' },
+    { value: '88', label: 'Profitable large U.S. corporations that paid zero federal income tax in their most recent year, despite $105B+ in U.S. profits', source: 'Institute on Taxation and Economic Policy', url: 'https://itep.org/88-profitable-corporations-paid-zero-income-tax-in-2025/', note: '2025' },
+    { value: '9%', label: 'Average effective federal tax rate paid by profitable large corporations in 2018 — down from 16% in 2014, after the statutory rate was cut from 35% to 21%', source: 'U.S. Government Accountability Office', url: 'https://www.gao.gov/products/gao-23-105384' },
+
+  ],
+
+  climate: [
+    { value: '~74M', label: 'Americans — more than a fifth of the country — exposed to elevated industrial cancer risk from toxic air', source: 'ProPublica analysis of EPA data ("Poison in the Air")', url: 'https://www.propublica.org/article/toxmap-poison-in-the-air' },
+    { value: '79%', label: 'Black Americans are 79% more likely than white Americans to live where industrial pollution is highest', source: 'The Climate Reality Project', url: 'https://www.climaterealityproject.org/sacrifice-zones' },
+    { value: '2–9x', label: 'Lifetime cancer risk above EPA’s acceptable level for those nearest some "Cancer Alley" plants', source: 'ProPublica', url: 'https://www.propublica.org/article/how-black-communities-become-sacrifice-zones-for-industrial-air-pollution' },
+  ],
+  schools: [
+    { value: '6,870', label: 'School book bans in the 2024–25 year alone — nearly 23,000 since 2021, a level without precedent', source: 'PEN America', url: 'https://pen.org/book-bans/', note: '2024–25' },
+    { value: '~72%', label: 'Share of book challenges pushed by organized groups and officials — not individual parents (about 16%)', source: 'American Library Association', url: 'https://pen.org/book-bans/', note: '2024' },
+    { value: '45%', label: 'Share of 12th graders scoring below NAEP Basic in math — the highest (worst) on record — while the culture war rages', source: 'NAEP, The Nation’s Report Card', url: 'https://www.nagb.gov/news-and-events/news-releases/2025/declines-in-8th-grade-science-and-12th-grade-math-and-reading.html', note: '2024' },
+  ],
+  rights: [
+    { value: '44%', label: 'Transgender adults who say they’ve feared for their personal safety — vs 12% of gay/lesbian and 8% of bisexual adults', source: 'Pew Research Center', url: 'https://www.pewresearch.org/social-trends/2025/05/29/the-experiences-of-lgbtq-americans-today/', note: 'Jan 2025 survey' },
+    { value: '~1 in 10', label: 'LGBTQ adults who say there is broad social acceptance for transgender people in the U.S. (vs ~6 in 10 for gay/lesbian people)', source: 'Pew Research Center', url: 'https://www.pewresearch.org/social-trends/2025/05/29/the-experiences-of-lgbtq-americans-today/', note: '2025' },
+    { value: '42%', label: 'Transgender adults subjected to slurs or jokes about their identity — nearly double the rate for gay/lesbian adults', source: 'Pew Research Center', url: 'https://www.pewresearch.org/social-trends/2025/05/29/the-experiences-of-lgbtq-americans-today/', note: '2025' },
   ],
 }
 
@@ -386,3 +405,16 @@ export const BOTH_SIDES: Receipt[] = [
     note: '2021 quote; 2024 returns',
   },
 ]
+
+// ---------------------------------------------------------------------------
+//  BOTH SIDES FEED THIS — per-issue even-handed receipts. One Democrat example,
+//  one Republican example (and sometimes a "both") of perpetuating the problem,
+//  each kept in accurate context with a primary/secondary source.
+// ---------------------------------------------------------------------------
+export const ISSUE_RECEIPTS: Record<string, Receipt[]> = {
+  government: [
+    { side: 'Both', who: 'Four presidents, one untouched loophole', claim: 'The carried-interest loophole lets investment managers pay the ~20% capital-gains rate instead of ordinary income rates up to 37%. Bush, Obama, Trump, and Biden all promised to close it. None did.', source: 'NOTUS', url: 'https://www.notus.org/money/trump-wall-street-tax-carried-interest-loophole-reconciliation' },
+    { side: 'Republican', who: 'The 2017 Tax Cuts & Jobs Act', claim: 'Republicans claimed the TCJA would fix carried interest, but the three-year holding rule they wrote exempts virtually all private-equity deals (held 5–7 years). The loophole survived after heavy PE lobbying.', source: 'Americans for Financial Reform', url: 'https://ourfinancialsecurity.org/resources/close-the-carried-interest-loophole-that-is-a-tax-dodge-for-super-rich-private-equity-executives/' },
+    { side: 'Democrat', who: 'The 2022 Inflation Reduction Act', claim: 'Democrats promised to close the loophole, then stripped the provision to win Sen. Sinema’s vote — after she took ~$2M from the securities and investment industry. “Hats off to the P/E lobby,” a former Goldman CEO mocked.', source: 'CNBC', url: 'https://www.cnbc.com/2022/08/09/how-wall-street-wooed-sen-kyrsten-sinema-and-preserved-its-multi-billion-dollar-carried-interest-tax-break.html' },
+  ],
+}

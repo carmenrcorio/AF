@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { ISSUES, getIssue, STATS } from '@/lib/content'
+import { ISSUES, getIssue, STATS, ISSUE_RECEIPTS } from '@/lib/content'
 import IssueAmendments from '@/app/components/IssueAmendments'
 
 export function generateStaticParams() {
@@ -19,6 +19,7 @@ export default async function IssuePage({ params }: { params: Promise<{ slug: st
   if (!issue) notFound()
 
   const stats = STATS[slug] ?? []
+  const receipts = ISSUE_RECEIPTS[slug] ?? []
   const idx = ISSUES.findIndex((i) => i.slug === slug)
   const next = ISSUES[(idx + 1) % ISSUES.length]
 
@@ -110,6 +111,26 @@ export default async function IssuePage({ params }: { params: Promise<{ slug: st
               </div>
             )}
           </div>
+          {receipts.length > 0 && (
+            <div className="block">
+              <div className="block-label">Both Sides Feed This</div>
+              <h2>Neither party’s hands are clean.</h2>
+              <p className="intro">The machine isn’t left or right — it’s the people in both parties who profit from leaving it broken. Here’s the proof, in context, with sources.</p>
+              <div className="receipts">
+                {receipts.map((r, i) => (
+                  <div className={`receipt side-${r.side.toLowerCase()}`} key={i}>
+                    <div className="receipt-head">
+                      <span className="receipt-side">{r.side}</span>
+                      <span className="receipt-who">{r.who}</span>
+                    </div>
+                    <p className="receipt-claim">{r.claim}</p>
+                    <a className="stat-source" href={r.url} target="_blank" rel="noopener noreferrer">{r.source}{r.note ? ` · ${r.note}` : ''} ↗</a>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           <IssueAmendments slug={issue.slug} />
         </div>
       </section>

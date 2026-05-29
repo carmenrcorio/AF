@@ -25,6 +25,24 @@ _Work in progress toward the next tagged release._
 
 ---
 
+## [0.9.0] — 2026-05-29 — Even-handedness, wave 1 (Government) + tax stats
+
+### Added
+- **"Both Sides Feed This"** reusable section on issue pages — per-issue even-handed receipts
+  (Democrat + Republican examples, in context, sourced). Live first on **Government/Taxes**:
+  the carried-interest loophole that Bush, Obama, Trump, and Biden all promised to close and
+  none did (TCJA exemption + IRA carve-out for Sinema).
+- **Government tax stats**: 88 profitable corporations paid $0 federal income tax (ITEP, 2025);
+  effective corporate rate fell 16%→9% after the 2017 cut (GAO).
+- `ISSUE_RECEIPTS` map in content; receipts wired into the issue template for all issues
+  (renders only where data exists).
+
+### Notes
+- Remaining 7 issues' both-sides receipts + Climate/Schools/Rights stats are the next install-
+  ments of this pass.
+
+---
+
 ## [0.8.0] — 2026-05-29 — QA fixes + credibility cleanup
 
 ### Fixed
