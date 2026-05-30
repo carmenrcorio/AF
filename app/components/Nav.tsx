@@ -10,6 +10,7 @@ const LINKS = [
   { href: '/common-ground', label: 'Common Ground' },
   { href: '/constitution', label: 'Constitution' },
   { href: '/amendments', label: 'Amendments' },
+  { href: '/scorecards', label: 'Scorecards' },
 ]
 
 export default function Nav() {

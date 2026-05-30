@@ -172,12 +172,13 @@ export default function Home() {
           <div className="sec-head">
             <span className="overline">Candidate Accountability</span>
             <h2>Know the right people. Support them — wherever you live.</h2>
-            <p>An honest scorecard for every representative and candidate. We grade them against the Plan, show who funds them, and link straight to the records — so cleaning house starts with knowing who&rsquo;s in the house.</p>
+            <p>An honest profile for every representative and candidate. We gather the public record — key votes, trades, donors, and positions — and link straight to the source, so cleaning house starts with knowing who&rsquo;s in the house.</p>
           </div>
           <div className="cand-soon">
             <div className="cand-soon-seal">★</div>
-            <h3>The scorecard is being built — the right way.</h3>
-            <p>We&rsquo;re not posting a single rating until it&rsquo;s real and sourced. Every profile will grade officials against the Plan and link straight to the records — <b>LibertyScore</b>, <b>TrackAIPAC</b>, and public <b>FEC filings</b> — so you can verify every claim yourself. No placeholders, no fabricated grades. That&rsquo;s the whole point of this movement.</p>
+            <h3>The first sourced profiles are live.</h3>
+            <p>We&rsquo;re not posting a single rating we can&rsquo;t defend. Each profile gathers the public record and links straight to it — <b>Congress.gov</b>, <b>GovTrack</b>, <b>OpenSecrets</b>, and public <b>FEC filings</b> — so you can verify every claim yourself. When we publish a scoring methodology, it&rsquo;ll be open and checkable. No placeholders, no fabricated grades.</p>
+            <Link href="/scorecards" className="btn btn-red" style={{ marginTop: 22 }}>See the scorecards</Link>
             <p className="cand-soon-note">Want to help research your district? Verified members will be able to contribute. Join below.</p>
           </div>
         </div>

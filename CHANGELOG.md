@@ -25,6 +25,27 @@ _Work in progress toward the next tagged release._
 
 ---
 
+## [0.16.0] — 2026-05-30 — Candidate Scorecards (aggregator)
+
+### Added
+- **Scorecards** (`/scorecards` + `/scorecards/[id]`) — sourced public-record profiles of officials.
+  Each profile aggregates key votes, trades, donors, and positions, every line linked to a primary
+  source (Congress.gov, GovTrack, OpenSecrets, FEC). Seeded with two real, even-handed examples
+  (Hawley, Pelosi) drawn from the 2025 congressional stock-trading-ban fight.
+- New Supabase table `candidate_records` (sourced line items) + extended `candidates` with
+  congress/govtrack/opensecrets/methodology URL fields. RLS: public read, admin/moderator write.
+- Added Scorecards to nav.
+
+### Design decision — "A now, B-ready later"
+- **We assign NO rating.** `af_score` and a per-record `alignment` column exist in the schema but
+  stay NULL. Every page states plainly that these are aggregated public records, not our opinion,
+  and that any future score will ship with an open, checkable methodology. This protects the
+  site's credibility-first ethos: we never put a number on the screen we can't defend.
+- Homepage candidate section reworded from "we grade them against the Plan" to the honest
+  aggregator framing, and now links to the live `/scorecards` page.
+
+---
+
 ## [0.15.0] — 2026-05-30 — Live QA fixes: mobile nav + citation integrity
 
 ### Fixed — Critical
