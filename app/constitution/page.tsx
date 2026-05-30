@@ -42,6 +42,23 @@ export default async function ConstitutionPage() {
 
   const explained = rows.filter((r) => r.plain_text).length
 
+  // Map of provision_id -> count of open amendments anchored to it
+  const amendCounts: Record<number, number> = {}
+  try {
+    const supabase = await createClient()
+    const { data: amds } = await supabase
+      .from('amendments')
+      .select('provision_id')
+      .eq('status', 'open')
+      .not('provision_id', 'is', null)
+    for (const row of amds ?? []) {
+      const pid = (row as { provision_id: number }).provision_id
+      amendCounts[pid] = (amendCounts[pid] ?? 0) + 1
+    }
+  } catch {
+    // non-fatal: provisions still render without counts
+  }
+
   return (
     <>
       <section className="page-hero">
@@ -64,7 +81,7 @@ export default async function ConstitutionPage() {
             <div key={g.key} className="const-group">
               <h2 className="const-group-title">{g.title}</h2>
               {g.items.map((r) => (
-                <Provision key={r.id} label={r.label} original={r.original_text} plain={r.plain_text} />
+                <Provision key={r.id} label={r.label} original={r.original_text} plain={r.plain_text} amendCount={amendCounts[r.id] ?? 0} />
               ))}
             </div>
           ))}

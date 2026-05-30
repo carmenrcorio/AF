@@ -25,6 +25,28 @@ _Work in progress toward the next tagged release._
 
 ---
 
+## [0.17.0] — 2026-05-30 — Clause-level amendments (Constitution-anchored)
+
+### Added
+- **Propose form** now asks whether a proposal amends an existing provision, adds a new
+  article/amendment, or is a statute/policy. If it amends, the proposer picks the exact
+  Constitution provision (Articles + Amendments) from a live dropdown. Shown in the review step.
+- **Amendment detail page** renders the anchored provision — its exact original text plus the
+  plain-English explanation — so readers see precisely what part of the Constitution a proposal
+  would change, and can jump to it.
+- **Constitution page** is now a live map of citizen demand: each provision shows a badge with the
+  count of open amendments anchored to it, and a link to view those proposed changes. Counts come
+  from a live query; non-fatal if it fails.
+
+### Notes
+- Uses the existing `amendments.provision_id` FK (no schema change needed).
+- Badges/anchors display only once verified users propose anchored amendments (gated behind
+  Twilio). Machinery is built and verified to compile; will populate live post-launch.
+- This ties the amendment engine to the Living Constitution: propose → anchor → see it on the
+  clause it changes.
+
+---
+
 ## [0.16.0] — 2026-05-30 — Candidate Scorecards (aggregator)
 
 ### Added

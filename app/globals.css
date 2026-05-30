@@ -482,3 +482,18 @@ footer{background:var(--ink);color:var(--cream);padding:60px 0 34px}
 .ext-links{display:flex;flex-wrap:wrap;gap:12px}
 .ext-link{font-size:13px;font-weight:600;color:var(--ink);border:1px solid var(--hair);background:var(--parchment-2);padding:10px 16px;transition:all .2s}
 .ext-link:hover{border-color:var(--gold);background:rgba(176,141,76,.06)}
+
+/* ============ AMENDMENT → PROVISION ANCHOR ============ */
+.anchor-prov{border:1px solid var(--gold);background:rgba(176,141,76,.06);padding:24px 26px;margin-bottom:32px}
+.anchor-prov .block-label{color:var(--gold);margin-bottom:10px}
+.anchor-prov-label{display:inline-block;font-family:'Libre Caslon Display',serif;font-size:20px;color:var(--ink);margin-bottom:12px;border-bottom:1px solid rgba(176,141,76,.4)}
+.anchor-prov-label:hover{border-color:var(--gold)}
+.anchor-prov-text{font-family:'Libre Caslon Text',serif;font-size:15px;line-height:1.7;color:var(--slate);font-style:italic}
+.anchor-prov-plain{margin-top:14px;font-size:14px;line-height:1.6;color:var(--ink)}
+.anchor-prov-plain .tag{display:inline-block;font-family:'Public Sans';font-style:normal;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--gold);padding:2px 8px;margin-right:8px}
+
+/* provision amendment badge */
+.prov-head-right{display:flex;align-items:center;gap:12px}
+.prov-amend-badge{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--red);background:rgba(178,34,52,.1);padding:3px 9px;border-radius:2px}
+.prov-amend-link{display:inline-block;margin-top:12px;font-size:13px;font-weight:600;color:var(--red);border-bottom:1px solid rgba(178,34,52,.3);padding-bottom:1px}
+.prov-amend-link:hover{border-color:var(--red)}

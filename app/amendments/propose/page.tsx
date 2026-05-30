@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/client'
 import { ISSUES } from '@/lib/content'
@@ -14,15 +14,30 @@ type Form = {
   problem: string
   affects: string
   objection: string
+  change_kind: string
+  provision_id: string
 }
 
-const EMPTY: Form = { title: '', issue_slug: '', change_text: '', problem: '', affects: '', objection: '' }
+type Provision = { id: number; type: string; label: string }
+
+const EMPTY: Form = { title: '', issue_slug: '', change_text: '', problem: '', affects: '', objection: '', change_kind: 'amend', provision_id: '' }
 
 export default function ProposePage() {
   const [f, setF] = useState<Form>(EMPTY)
   const [stage, setStage] = useState<'edit' | 'review' | 'done' | 'gated'>('edit')
   const [err, setErr] = useState('')
   const [loading, setLoading] = useState(false)
+  const [provisions, setProvisions] = useState<Provision[]>([])
+
+  useEffect(() => {
+    const supabase = createClient()
+    supabase
+      .from('constitution_provisions')
+      .select('id,type,label')
+      .in('type', ['article', 'amendment'])
+      .order('display_order', { ascending: true })
+      .then(({ data }) => { if (data) setProvisions(data as Provision[]) })
+  }, [])
 
   function set<K extends keyof Form>(k: K, v: string) {
     setF((prev) => ({ ...prev, [k]: v }))
@@ -62,6 +77,7 @@ export default function ProposePage() {
       objection: f.objection.trim(),
       body: f.change_text.trim(),
       status: 'open',
+      provision_id: f.change_kind === 'amend' && f.provision_id ? Number(f.provision_id) : null,
     })
     setLoading(false)
     if (error) { setErr(error.message); setStage('edit'); return }
@@ -102,6 +118,26 @@ export default function ProposePage() {
               </label>
 
               <label className="fld">
+                <span>Does this change the Constitution?</span>
+                <select value={f.change_kind} onChange={(e) => set('change_kind', e.target.value)}>
+                  <option value="amend">Yes — it amends an existing provision</option>
+                  <option value="new">Yes — it adds a brand-new article/amendment</option>
+                  <option value="statute">No — it&rsquo;s a law/policy, not a constitutional change</option>
+                </select>
+                <small className="fld-hint">Anchoring to a specific clause makes your proposal concrete — and shows exactly what text would change.</small>
+              </label>
+
+              {f.change_kind === 'amend' && (
+                <label className="fld">
+                  <span>Which provision does it amend?</span>
+                  <select value={f.provision_id} onChange={(e) => set('provision_id', e.target.value)}>
+                    <option value="">— choose a provision —</option>
+                    {provisions.map((p) => <option key={p.id} value={p.id}>{p.label}</option>)}
+                  </select>
+                </label>
+              )}
+
+              <label className="fld">
                 <span>The change — write it as you&rsquo;d want it to read in law</span>
                 <textarea value={f.change_text} onChange={(e) => set('change_text', e.target.value)} rows={4} placeholder="The actual rule or text you are proposing." />
               </label>
@@ -134,6 +170,13 @@ export default function ProposePage() {
               <div className="review">
                 <div className="rv-row"><span className="rv-k">Amendment</span><p className="rv-v rv-title">{f.title}</p></div>
                 <div className="rv-row"><span className="rv-k">Addresses</span><p className="rv-v">{issueTitle}</p></div>
+                <div className="rv-row"><span className="rv-k">Constitutional</span><p className="rv-v">{
+                  f.change_kind === 'amend'
+                    ? `Amends ${provisions.find((p) => String(p.id) === f.provision_id)?.label ?? '(no provision selected)'}`
+                    : f.change_kind === 'new'
+                    ? 'Adds a new article/amendment'
+                    : 'Statute / policy — not a constitutional change'
+                }</p></div>
                 <div className="rv-row"><span className="rv-k">The change</span><p className="rv-v">{f.change_text}</p></div>
                 <div className="rv-row"><span className="rv-k">The problem</span><p className="rv-v">{f.problem}</p></div>
                 <div className="rv-row"><span className="rv-k">Who it affects</span><p className="rv-v">{f.affects}</p></div>
