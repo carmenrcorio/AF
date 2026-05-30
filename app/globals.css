@@ -51,7 +51,24 @@ nav{display:flex;align-items:center;justify-content:space-between;height:74px;ma
 .btn-red:hover{background:var(--red-deep)}
 .btn-ghost{background:rgba(255,255,255,.06);color:var(--parchment-2);border:1.5px solid rgba(217,193,140,.75);padding:10.5px 22.5px}
 .btn-ghost:hover{background:var(--gold);color:var(--ink)}
-@media(max-width:780px){.navlinks{display:none}}
+.nav-toggle{display:none}
+@media(max-width:860px){
+  .navlinks{display:none}
+  .nav-join{display:none}
+  .nav-toggle{display:flex;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;background:transparent;border:none;cursor:pointer;padding:0}
+  .nt-bar{display:block;width:24px;height:2px;background:var(--parchment-2);margin:0 auto;transition:transform .25s,opacity .25s}
+  .nt-bar.x1{transform:translateY(7px) rotate(45deg)}
+  .nt-bar.x2{opacity:0}
+  .nt-bar.x3{transform:translateY(-7px) rotate(-45deg)}
+}
+.mobile-drawer{display:none}
+@media(max-width:860px){
+  .mobile-drawer{display:flex;flex-direction:column;background:var(--ink-2);border-top:1px solid rgba(176,141,76,.22);max-height:0;overflow:hidden;transition:max-height .32s ease}
+  .mobile-drawer.is-open{max-height:520px}
+  .mobile-drawer a{color:var(--parchment-2);font-size:16px;font-weight:500;padding:16px 28px;border-bottom:1px solid rgba(255,255,255,.06)}
+  .mobile-drawer a:hover{background:rgba(255,255,255,.04)}
+  .mobile-drawer .drawer-join{margin:18px 28px 24px;text-align:center;border-bottom:none;color:#fff}
+}
 
 /* ============ HERO ============ */
 .hero{position:relative;background:var(--ink);color:var(--parchment-2);overflow:hidden;padding:84px 0 0}
@@ -80,7 +97,7 @@ nav{display:flex;align-items:center;justify-content:space-between;height:74px;ma
 .pledge-card .overline{margin-bottom:16px;display:block}
 .pledge-card p{font-family:'Libre Caslon Text',serif;font-style:italic;font-size:18px;line-height:1.6;color:var(--cream)}
 .pledge-card .sig{margin-top:18px;font-size:12px;letter-spacing:.06em;color:var(--gold);font-weight:600}
-.ticker{display:flex;gap:0;margin-top:72px;border-top:1px solid var(--hair)}
+.ticker{display:flex;gap:0;margin-top:48px;border-top:1px solid var(--hair)}
 .ticker .it{flex:1;padding:30px 18px;text-align:center;border-right:1px solid var(--hair)}
 .ticker .it:last-child{border-right:none}
 .ticker .num{font-family:'Libre Caslon Display',serif;font-size:38px;color:var(--gold-light)}
@@ -159,7 +176,7 @@ section{padding:96px 0}
 @media(max-width:880px){.const-grid{grid-template-columns:1fr;gap:38px}}
 .const-title{font-size:clamp(30px,4vw,46px);margin-top:14px}
 .const-copy{margin-top:18px;font-size:16.5px;line-height:1.65;color:var(--slate)}
-.const-try{margin-top:14px;font-size:14px;color:var(--gold);font-weight:600;letter-spacing:.02em}
+.const-try{margin-top:14px;font-size:14px;color:var(--red);font-weight:700;letter-spacing:.02em}
 .const-cta{margin-top:30px}
 .const-demo{background:var(--parchment-2);border:1px solid var(--hair);padding:38px 36px;box-shadow:0 30px 60px -30px rgba(11,27,51,.35);position:relative}
 .const-demo::before{content:"WE THE PEOPLE";position:absolute;top:16px;right:20px;font-family:'Libre Caslon Display',serif;font-size:10px;letter-spacing:.2em;color:var(--gold);opacity:.55}

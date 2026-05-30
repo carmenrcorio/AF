@@ -159,7 +159,7 @@ export default function Home() {
               </div>
               <div className="plain">
                 <span className="tag">Plain English</span>
-                <span>{active === null ? 'Tap any underlined phrase above to see what it means in today\u2019s language.' : PREAMBLE[active].p}</span>
+                <span>{active === null ? 'Tap any underlined phrase above to see what it means in today’s language.' : PREAMBLE[active].p}</span>
               </div>
             </div>
           </div>

@@ -25,6 +25,43 @@ _Work in progress toward the next tagged release._
 
 ---
 
+## [0.15.0] — 2026-05-30 — Live QA fixes: mobile nav + citation integrity
+
+### Fixed — Critical
+- **Mobile navigation (was completely broken).** Below the breakpoint the nav links simply
+  vanished with no replacement — phone visitors could not navigate at all. Added a working
+  hamburger button + slide-down drawer with all routes and a Join CTA. Breakpoint raised to 860px
+  so links collapse before they crowd.
+- **Dead citation link (/problem).** "The Outrage Industry" linked to a 404'd OUP ISBN; corrected
+  to the live OUP product page.
+- **Mislabeled citation (/schools).** A stat labeled "American Library Association" linked to PEN
+  America. Split correctly: book-ban count → PEN America (their figure), organized-pressure 72%
+  → ALA's own censorship-numbers page.
+- **Blank/wrong-source citation (/schools).** "EdBuild" linked to a blank saphron.org page;
+  repointed to the Washington Post's report on the EdBuild $23B finding.
+
+### Fixed — Major
+- **Sludge citation (/healthcare)** repointed from a republished Substack to the original
+  readsludge.com article.
+- **NOTUS citation (/government)** relabeled "NOTUS (now The Star)" to match its rebrand.
+- **OpenSecrets $15.9B (/problem)** repointed from the pre-election projection to the
+  post-election confirmed-figures article.
+- **Pelosi receipt (/problem)** trimmed to what the cited source supports; quote marked as
+  reported, dropped the unsupported second source.
+- **Pew label (/rights)** "Jan 2025 survey" → "2025" to match the published report date.
+- **WaPo /ripple opinion link (/schools)** repointed to The 74's straight-news coverage of the
+  same NAEP proficiency data.
+
+### Fixed — Polish
+- Hero dead-zone tightened (ticker margin 72px → 48px).
+- "Try it: tap the highlighted phrases" hint given high contrast (red) instead of pale gold.
+
+### Notes
+- Twilio-gated participation (amendment submit / join) remains a known launch blocker, not a bug;
+  it fails gracefully with clear messaging.
+
+---
+
 ## [0.14.1] — 2026-05-30 — Fix amendments empty-state overlap
 
 ### Fixed

@@ -353,12 +353,12 @@ export const STATS: Record<string, Stat[]> = {
     { value: '2–9x', label: 'Lifetime cancer risk above EPA’s acceptable level for those nearest some "Cancer Alley" plants', source: 'ProPublica', url: 'https://www.propublica.org/article/how-black-communities-become-sacrifice-zones-for-industrial-air-pollution' },
   ],
   schools: [
-    { value: '6,870', label: 'School book bans in the 2024–25 year alone — nearly 23,000 since 2021, a level without precedent', source: 'PEN America', url: 'https://pen.org/book-bans/', note: '2024–25' },
-    { value: '~72%', label: 'Share of book challenges pushed by organized groups and officials — not individual parents (about 16%)', source: 'American Library Association', url: 'https://pen.org/book-bans/', note: '2024' },
+    { value: '10,000+', label: 'Public-school book bans PEN America counted in a single school year (2023–24) — roughly triple the prior year', source: 'PEN America', url: 'https://pen.org/book-bans/', note: '2023–24' },
+    { value: '~72%', label: 'Share of 2024 book-censorship demands driven by organized pressure groups and officials — not individual parents (about 16%)', source: 'American Library Association', url: 'https://www.ala.org/bbooks/censorship-numbers', note: '2024' },
     { value: '45%', label: 'Share of 12th graders scoring below NAEP Basic in math — the highest (worst) on record — while the culture war rages', source: 'NAEP, The Nation’s Report Card', url: 'https://www.nagb.gov/news-and-events/news-releases/2025/declines-in-8th-grade-science-and-12th-grade-math-and-reading.html', note: '2024' },
   ],
   rights: [
-    { value: '44%', label: 'Transgender adults who say they’ve feared for their personal safety — vs 12% of gay/lesbian and 8% of bisexual adults', source: 'Pew Research Center', url: 'https://www.pewresearch.org/social-trends/2025/05/29/the-experiences-of-lgbtq-americans-today/', note: 'Jan 2025 survey' },
+    { value: '44%', label: 'Transgender adults who say they’ve feared for their personal safety — vs 12% of gay/lesbian and 8% of bisexual adults', source: 'Pew Research Center', url: 'https://www.pewresearch.org/social-trends/2025/05/29/the-experiences-of-lgbtq-americans-today/', note: '2025' },
     { value: '~1 in 10', label: 'LGBTQ adults who say there is broad social acceptance for transgender people in the U.S. (vs ~6 in 10 for gay/lesbian people)', source: 'Pew Research Center', url: 'https://www.pewresearch.org/social-trends/2025/05/29/the-experiences-of-lgbtq-americans-today/', note: '2025' },
     { value: '42%', label: 'Transgender adults subjected to slurs or jokes about their identity — nearly double the rate for gay/lesbian adults', source: 'Pew Research Center', url: 'https://www.pewresearch.org/social-trends/2025/05/29/the-experiences-of-lgbtq-americans-today/', note: '2025' },
   ],
@@ -397,10 +397,10 @@ export const BOTH_SIDES: Receipt[] = [
   {
     side: 'Democrat',
     who: 'Rep. Nancy Pelosi (D)',
-    claim: 'Rejected a trading ban with “We are a free-market economy. They should be able to participate in that.” Her family’s disclosed trades returned ~71% in 2024, far beating the market.',
-    source: 'CNN; Fortune (Unusual Whales)',
+    claim: 'In 2021 she rejected a congressional trading ban, saying “We are a free-market economy; they should be able to participate in that.” Her family’s disclosed trades have repeatedly beaten the market, making her a top target of trade-tracking accounts.',
+    source: 'CNN',
     url: 'https://www.cnn.com/2025/11/06/politics/stock-tracker-nancy-pelosi-investors',
-    note: '2021 quote; 2024 returns',
+    note: 'reported 2021 quote',
   },
 ]
 
@@ -411,7 +411,7 @@ export const BOTH_SIDES: Receipt[] = [
 // ---------------------------------------------------------------------------
 export const ISSUE_RECEIPTS: Record<string, Receipt[]> = {
   government: [
-    { side: 'Both', who: 'Four presidents, one untouched loophole', claim: 'The carried-interest loophole lets investment managers pay the ~20% capital-gains rate instead of ordinary income rates up to 37%. Bush, Obama, Trump, and Biden all promised to close it. None did.', source: 'NOTUS', url: 'https://www.notus.org/money/trump-wall-street-tax-carried-interest-loophole-reconciliation' },
+    { side: 'Both', who: 'Four presidents, one untouched loophole', claim: 'The carried-interest loophole lets investment managers pay the ~20% capital-gains rate instead of ordinary income rates up to 37%. Bush, Obama, Trump, and Biden all promised to close it. None did.', source: 'NOTUS (now The Star)', url: 'https://www.notus.org/money/trump-wall-street-tax-carried-interest-loophole-reconciliation' },
     { side: 'Republican', who: 'The 2017 Tax Cuts & Jobs Act', claim: 'Republicans claimed the TCJA would fix carried interest, but the three-year holding rule they wrote exempts virtually all private-equity deals (held 5–7 years). The loophole survived after heavy PE lobbying.', source: 'Americans for Financial Reform', url: 'https://ourfinancialsecurity.org/resources/close-the-carried-interest-loophole-that-is-a-tax-dodge-for-super-rich-private-equity-executives/' },
     { side: 'Democrat', who: 'The 2022 Inflation Reduction Act', claim: 'Democrats promised to close the loophole, then stripped the provision to win Sen. Sinema’s vote — after she took ~$2M from the securities and investment industry. “Hats off to the P/E lobby,” a former Goldman CEO mocked.', source: 'CNBC', url: 'https://www.cnbc.com/2022/08/09/how-wall-street-wooed-sen-kyrsten-sinema-and-preserved-its-multi-billion-dollar-carried-interest-tax-break.html' },
   ],
@@ -425,7 +425,7 @@ export const ISSUE_RECEIPTS: Record<string, Receipt[]> = {
   ],
   healthcare: [
     { side: 'Both', who: 'The pharmaceutical lobby', claim: 'PhRMA’s spending regularly tops $500 million a year, and drug-industry PACs give to both parties — Pfizer’s network funded the Republican and Democratic Senate committees at nearly equal levels in 2023–24. The result: drug-pricing reform that crawls while both sides cash the checks.', source: 'PharmaVoice / OpenSecrets', url: 'https://www.pharmavoice.com/news/big-pharma-campaign-election-pac-donations/731124/' },
-    { side: 'Both', who: 'PhRMA’s dark money', claim: 'PhRMA has funneled tens of millions to “dark money” groups on both sides — including $38M+ since Citizens United to a GOP-aligned network and large gifts to Democrat-aligned groups — to blunt reform from whichever direction it comes.', source: 'Sludge (citing Issue One)', url: 'https://dailynewsfromaolf.substack.com/p/phrma-showers-millions-on-dark-money' },
+    { side: 'Both', who: 'PhRMA’s dark money', claim: 'PhRMA has funneled tens of millions to “dark money” groups on both sides — including $38M+ since Citizens United to a GOP-aligned network and large gifts to Democrat-aligned groups — to blunt reform from whichever direction it comes.', source: 'Sludge (citing Issue One)', url: 'https://readsludge.com/2024/12/04/phrma-showers-millions-on-dark-money-groups-fighting-drug-price-reforms/' },
   ],
   guns: [
     { side: 'Both', who: 'The outrage-fundraising cycle', claim: 'A peer-reviewed study found NRA donations measurably spike in the very counties that suffer school shootings — while gun-control groups raise record sums off the same tragedies. Both sides convert each massacre into members and money.', source: 'Science Advances, via Science', url: 'https://www.science.org/content/article/nra-donations-spike-counties-have-experienced-school-shootings' },
@@ -436,9 +436,9 @@ export const ISSUE_RECEIPTS: Record<string, Receipt[]> = {
     { side: 'Both', who: 'The private-prison business', claim: 'For-profit prisons and detention contractors profit from full cells regardless of which party holds power — the same incentive that keeps the system large no matter who runs Washington.', source: 'Prison Policy Initiative', url: 'https://www.prisonpolicy.org/research/racial_and_ethnic_disparities/' },
   ],
   schools: [
-    { side: 'Both', who: 'How schools are funded', claim: 'Because public schools lean on local property taxes, wealthy districts vastly outspend poor ones. One analysis found predominantly white districts received about $23 billion more than districts serving mostly students of color — for the same number of kids. The structure fails poor children in red and blue states alike.', source: 'EdBuild', url: 'https://www.saphron.org/edisco/protectdoe-e2xez-czx67' },
+    { side: 'Both', who: 'How schools are funded', claim: 'Because public schools lean on local property taxes, wealthy districts vastly outspend poor ones. One analysis found predominantly white districts received about $23 billion more than districts serving mostly students of color — for the same number of kids. The structure fails poor children in red and blue states alike.', source: 'EdBuild (via Washington Post)', url: 'https://www.washingtonpost.com/local/education/report-finds-23-billion-racial-funding-gap-for-schools/2019/02/25/d562b704-3915-11e9-a06c-3ec8ed509d15_story.html' },
     { side: 'Republican', who: 'Draining the public system', claim: 'The push for vouchers and private "school choice" diverts public dollars away from the high-poverty public schools most children still attend — while efforts to equalize funding stall. The neediest schools are left with the least.', source: 'EdSource', url: 'https://edsource.org/2025/property-tax-driven-education-disparity/742256' },
-    { side: 'Democrat', who: 'Passing kids without the skills', claim: 'Graduation rates keep rising while proficiency falls. Through "equitable grading," credit recovery, and social promotion, low-income students get moved through the system and handed a diploma without the skills it is supposed to represent — just 35% of 12th graders are proficient in reading.', source: 'The Washington Post; NAEP', url: 'https://www.washingtonpost.com/ripple/2026/04/17/graduation-rates-student-proficiency-test-scores/' },
+    { side: 'Democrat', who: 'Passing kids without the skills', claim: 'Graduation rates keep rising while proficiency falls. Through "equitable grading," credit recovery, and social promotion, low-income students get moved through the system and handed a diploma without the skills it is supposed to represent — just 35% of 12th graders are proficient in reading.', source: 'The 74; NAEP', url: 'https://www.the74million.org/article/the-graduation-gap-when-students-earn-a-high-school-diploma-but-still-cant-do-math/' },
   ],
   rights: [
     { side: 'Republican', who: 'The base-mobilization machine', claim: 'Conservative groups spent $200M+ on anti-trans ads in the 2024 cycle — by one estimate, about $134 for every trans person in America — on an issue voters rank near the bottom of their concerns. One strategist called it figuring out "how to win parts of the culture war" by firing up the base, not by solving anything.', source: 'Texas Tribune', url: 'https://www.texastribune.org/2024/11/08/transgender-ads-motivate-texas-republicans/' },
@@ -451,6 +451,6 @@ export const ISSUE_RECEIPTS: Record<string, Receipt[]> = {
 //  THE DIVISION MACHINE — the structural explanation beneath every receipt.
 // ---------------------------------------------------------------------------
 export const DIVISION_STATS: Stat[] = [
-  { value: '$15.9B', label: 'Cost of the 2024 election — the most expensive in U.S. history — with roughly half of all contributions coming from the top 1% of donors', source: 'OpenSecrets', url: 'https://www.opensecrets.org/news/2024/10/total-2024-election-spending-projected-to-exceed-previous-record/' },
-  { value: 'By design', label: 'Engagement algorithms learn that anger holds attention better than agreement — so the platforms, shows, and campaigns that profit from your attention feed you the most enraging version of the other side', source: 'Berry & Sobieraj, "The Outrage Industry"', url: 'https://global.oup.com/academic/product/the-outrage-industry-9780199928972' },
+  { value: '$15.9B', label: 'Cost of the 2024 election — the most expensive in U.S. history — with roughly half of all contributions coming from the top 1% of donors', source: 'OpenSecrets', url: 'https://www.opensecrets.org/news/2024/11/big-money-big-stakes-5-things-everyone-should-know-about-money-in-2024-election/' },
+  { value: 'By design', label: 'Engagement algorithms learn that anger holds attention better than agreement — so the platforms, shows, and campaigns that profit from your attention feed you the most enraging version of the other side', source: 'Berry & Sobieraj, "The Outrage Industry"', url: 'https://global.oup.com/academic/product/the-outrage-industry-9780190498467' },
 ]
