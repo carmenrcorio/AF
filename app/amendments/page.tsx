@@ -60,7 +60,7 @@ export default async function AmendmentsPage() {
               <p>{dbReady
                 ? 'The table is empty. The first proposal sets the tone: think it through, make it count.'
                 : 'Amendments will appear here once the backend connection is live on this deployment.'}</p>
-              <Link href="/amendments/propose" className="btn btn-red" style={{ marginTop: 18 }}>Propose the first one</Link>
+              <Link href="/amendments/propose" className="btn btn-red">Propose the first one</Link>
             </div>
           )}
 

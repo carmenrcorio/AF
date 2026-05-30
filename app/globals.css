@@ -327,9 +327,11 @@ footer{background:var(--ink);color:var(--cream);padding:60px 0 34px}
 .rv-title{font-family:'Libre Caslon Display',serif;font-size:19px}
 @media(max-width:600px){.rv-row{grid-template-columns:1fr;gap:5px}}
 
-.empty-state{text-align:center;border:1px dashed var(--gold);background:rgba(176,141,76,.06);padding:54px 30px}
-.empty-state h3{font-size:26px;margin-bottom:10px}
+.empty-state{display:flex;flex-direction:column;align-items:center;text-align:center;border:1px dashed var(--gold);background:rgba(176,141,76,.06);padding:60px 30px}
+.empty-state .auth-seal{margin-bottom:14px}
+.empty-state h3{font-size:26px;margin-bottom:12px}
 .empty-state p{font-size:15px;color:var(--slate);max-width:460px;margin:0 auto;line-height:1.6}
+.empty-state .btn{margin-top:26px}
 
 .amend-card{display:block;border:1px solid var(--hair);background:var(--parchment-2);padding:26px 28px;margin-bottom:14px;transition:all .25s}
 .amend-card:hover{background:#fff;transform:translateY(-2px);box-shadow:0 20px 40px -28px rgba(11,27,51,.4)}

@@ -25,6 +25,16 @@ _Work in progress toward the next tagged release._
 
 ---
 
+## [0.14.1] — 2026-05-30 — Fix amendments empty-state overlap
+
+### Fixed
+- **Amendments empty state.** The "Propose the first one" button was overlapping the body text
+  because the container wasn't a flex column and the button's inline margin didn't force a line
+  break. Made `.empty-state` a centered vertical flex column so the star, heading, paragraph, and
+  button stack cleanly with proper spacing. (Found in live QA.)
+
+---
+
 ## [0.14.0] — 2026-05-29 — Design polish pass
 
 ### Changed
