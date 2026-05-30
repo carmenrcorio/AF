@@ -25,6 +25,28 @@ _Work in progress toward the next tagged release._
 
 ---
 
+## [0.18.0] — 2026-05-30 — Credibility pages (Charter + Our Sources)
+
+### Added
+- **The Charter** (`/charter`) — the movement's non-negotiables (human dignity, honesty over
+  advantage, accountability for everyone, Constitution as the floor, no movement is a savior) and
+  the working standards behind every page (everything sourced, two-parties-same-demons, no
+  fabricated ratings, verified one-person-one-vote, built in the open). Consolidates the
+  principles we've actually been building to all along.
+- **Our Sources** (`/sources`) — the sourcing methodology (primary-first, click-and-check, context
+  kept intact, corrected in the open) plus the real outlets/datasets the site rests on, grouped by
+  kind (government data, accountability research, journalism across the spectrum, research/polling).
+  Built from the site's actual citation list, not invented.
+
+### Fixed
+- Footer "Trust" column now points to the real `/sources` and `/charter` pages (previously
+  pointed at placeholder destinations — the QA-flagged dead-ish links).
+
+### Note
+- Caught and fixed literal \u escape sequences before they could render as raw text on the pages.
+
+---
+
 ## [0.17.0] — 2026-05-30 — Clause-level amendments (Constitution-anchored)
 
 ### Added

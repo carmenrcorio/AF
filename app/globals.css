@@ -497,3 +497,11 @@ footer{background:var(--ink);color:var(--cream);padding:60px 0 34px}
 .prov-amend-badge{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--red);background:rgba(178,34,52,.1);padding:3px 9px;border-radius:2px}
 .prov-amend-link{display:inline-block;margin-top:12px;font-size:13px;font-weight:600;color:var(--red);border-bottom:1px solid rgba(178,34,52,.3);padding-bottom:1px}
 .prov-amend-link:hover{border-color:var(--red)}
+
+/* ============ SOURCES PAGE ============ */
+.src-tier{margin-bottom:28px;padding-bottom:24px;border-bottom:1px solid var(--hair)}
+.src-tier:last-child{border-bottom:none}
+.src-tier-h{font-family:'Public Sans';font-weight:700;font-size:16px;color:var(--ink);margin-bottom:4px}
+.src-tier-note{font-size:13.5px;color:var(--slate);margin-bottom:14px;font-style:italic}
+.src-chips{display:flex;flex-wrap:wrap;gap:9px}
+.src-chip{font-size:12.5px;font-weight:500;color:var(--ink);background:var(--parchment-2);border:1px solid var(--hair);padding:7px 13px;border-radius:2px}

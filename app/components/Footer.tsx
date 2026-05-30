@@ -29,8 +29,8 @@ export default function Footer() {
           <div className="col">
             <h5>Trust</h5>
             <Link href="/constitution">The Constitution</Link>
-            <Link href="/amendments">Open Amendments</Link>
-            <Link href="/common-ground">Common Ground</Link>
+            <Link href="/sources">Our Sources</Link>
+            <Link href="/charter">Charter &amp; Principles</Link>
           </div>
         </div>
         <div className="foot-bottom">
