@@ -25,6 +25,74 @@ _Work in progress toward the next tagged release._
 
 ---
 
+## [0.14.0] — 2026-05-29 — Design polish pass
+
+### Changed
+- **Hero dead-zone fixed.** Removed the large empty gap below the hero CTAs; bottom padding cut
+  and the stat bar pulled up to anchor the dark section.
+- **Stat bar upgraded.** Numbers enlarged (30px → 38px), labels one weight bolder, more vertical
+  padding. "1 → 1" rewritten as "1:1 / One Citizen · One Vote" for instant clarity.
+- **Secondary CTA contrast.** The ghost "Propose an Amendment" button now has a faint fill and a
+  brighter gold border so it reads as a real, clickable target on the dark hero.
+- **Red join banner hierarchy.** "Create Your Account" is now the single clear primary (large
+  white button linking to /join); "See open amendments →" demoted to a text link beneath it.
+- **Footer.** Added a centered star + "A movement, not a party." tagline as a bookend; fixed dead
+  footer links (Propose → /amendments/propose, Vote → /amendments, Join → /join). Trust column
+  repointed to real existing pages until dedicated Sources/Charter pages are built.
+
+### Removed
+- Duplicate `.btn-cream` CSS rule.
+
+---
+
+## [0.13.0] — 2026-05-29 — Even-handedness pass COMPLETE + Division Machine
+
+### Added
+- **Schools** receipts: the property-tax funding structure (predominantly white districts got
+  ~$23B more — EdBuild) that fails poor kids in red and blue states; GOP-side public-school
+  defunding/vouchers; Democrat-side rising graduation rates while proficiency falls (just 35% of
+  12th graders proficient in reading).
+- **Rights** receipts: GOP $200M+ anti-trans ad machine on a near-bottom-priority issue (Texas
+  Tribune); corporate "rainbow capitalism" — Pride flags in June while funding anti-LGBTQ
+  lawmakers (OpenSecrets); and the outrage-as-a-product dynamic (NBC News).
+- **The Division Machine** — a new section on /problem tying the whole thesis together: a divided
+  public is a controllable public; the $15.9B 2024 election (top 1% gave ~half — OpenSecrets) and
+  the engagement-algorithm "outrage industry" (Berry & Sobieraj) as the structural cause.
+
+### Milestone
+- **All 8 issues now have sourced "Both Sides Feed This" receipts.** The even-handedness pass that
+  began with Government is complete: Government, Climate, Immigration, Healthcare, Guns, Justice,
+  Schools, Rights.
+
+### Editorial discipline held
+- On Rights and Schools, kept to documented facts and declined to manufacture false policy
+  symmetry. Where a clean party parallel didn't exist, used the real dynamic (outrage machine,
+  funding structure) rather than forcing one.
+
+---
+
+## [0.12.0] — 2026-05-29 — Logo + navbar wordmark + tile fixes
+
+### Fixed
+- **Navbar wordmark jam.** "America First" (serif) and "THE ONLY WAY" (gold caps) were rendering
+  inline with no gap, reading as one run-on word. `.brand-txt` now stacks them vertically as
+  intended.
+- **Uneven tiles.** Issue grid moved from 4 cramped columns to 3 with equal min-height and a
+  consistent baseline; phase cards forced to equal height (align-items: stretch).
+
+### Added
+- **New emblem.** Original eagle + American shield (star field + stripes) with "We the People"
+  in gold italic, replacing the placeholder AF monogram seal. SVG, recolorable, sharp at any size.
+  Deliberately an original mark — not the Great Seal or any existing org's logo.
+
+### Notes
+- Ground News has no public API / embeddable feed (checked their site + help center). Plan: link
+  to their per-story coverage pages rather than embed. Logged in roadmap.
+- Open design items still pending (hero vertical centering, CTA contrast, footer redesign,
+  dark→cream transition) — deferred to a dedicated design pass.
+
+---
+
 ## [0.11.0] — 2026-05-29 — Even-handedness, wave 3 (Healthcare + Guns + Justice)
 
 ### Added

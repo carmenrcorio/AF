@@ -42,7 +42,7 @@ export default function Home() {
             <div className="it"><div className="num">3</div><div className="lab">Phases of Reform</div></div>
             <div className="it"><div className="num">8</div><div className="lab">Issues, One Standard</div></div>
             <div className="it"><div className="num">100%</div><div className="lab">Sourced &amp; Verifiable</div></div>
-            <div className="it"><div className="num">1 → 1</div><div className="lab">One Citizen, One Vote</div></div>
+            <div className="it"><div className="num">1:1</div><div className="lab">One Citizen · One Vote</div></div>
           </div>
         </div>
       </section>
@@ -190,8 +190,8 @@ export default function Home() {
           <h2>This won&rsquo;t be written by donors.<br />It&rsquo;ll be written by us.</h2>
           <p>Verify with your phone, propose amendments, and vote on the ones that should become law. A movement for a new generation of Americans who are done being sold out — and ready to build something better.</p>
           <div className="cta-row">
-            <span className="btn btn-cream">Create Your Account</span>
-            <Link href="/amendments" className="btn btn-outline-w">See Open Amendments</Link>
+            <Link href="/join" className="btn btn-cream">Create Your Account</Link>
+            <Link href="/amendments" className="join-textlink">See open amendments →</Link>
           </div>
         </div>
       </section>

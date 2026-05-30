@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { PROBLEM_CLUSTERS, CAPTURE_STATS, BOTH_SIDES } from '@/lib/content'
+import { PROBLEM_CLUSTERS, CAPTURE_STATS, BOTH_SIDES, DIVISION_STATS } from '@/lib/content'
 
 export const metadata = { title: 'The Problem — America First' }
 
@@ -86,6 +86,22 @@ export default function ProblemPage() {
               ))}
             </div>
             <p className="stat-promise">★ Quotes are kept in full context and every claim links to its source. We refuse to win by distortion.</p>
+          </div>
+
+          <div className="block division">
+            <div className="block-label">The Division Machine</div>
+            <h2>They keep us divided to keep us disorganized.</h2>
+            <p className="intro">Here&rsquo;s the part both parties, most of the media, and every lobbyist would rather you not sit with: a divided public is a controllable public. As long as we&rsquo;re fighting each other, we&rsquo;re not organizing against them. It isn&rsquo;t an accident &mdash; it&rsquo;s a business model.</p>
+            <div className="stat-grid" style={{ gridTemplateColumns: 'repeat(2,1fr)' }}>
+              {DIVISION_STATS.map((st, i) => (
+                <div className="stat" key={i}>
+                  <div className="stat-value">{st.value}</div>
+                  <div className="stat-label">{st.label}</div>
+                  <a className="stat-source" href={st.url} target="_blank" rel="noopener noreferrer">{st.source}{st.note ? ` · ${st.note}` : ''} ↗</a>
+                </div>
+              ))}
+            </div>
+            <p className="division-close">The fight is sold to us as left vs. right. Follow the money and it&rsquo;s simpler: the people who profit from the fight, against everyone who pays for it. The way out isn&rsquo;t to stop disagreeing &mdash; it&rsquo;s to stop letting the people who profit from our division choose our enemies for us.</p>
           </div>
 
           <div className="principle-banner">
