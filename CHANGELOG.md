@@ -25,6 +25,31 @@ _Work in progress toward the next tagged release._
 
 ---
 
+## [0.19.0] — 2026-05-30 — Full Congress roster + scorecard browser
+
+### Added
+- **Congress roster import** — a one-time, re-runnable Node script (`import-congress.mjs`) that
+  pulls every current member of the House and Senate from the official Congress.gov API and upserts
+  them into `candidates` (keyed on a new unique `bioguide_id`). Each gets office, chamber, state,
+  party, and live links to Congress.gov, GovTrack, and an OpenSecrets search. No vote summaries —
+  those stay editorial. Script reads keys from env vars; never hardcoded.
+- **Scorecard browser** — the list page now handles the full ~535-member roster: live search by
+  name, filters by chamber / party / state, a member count, and a featured "Profiles with sourced
+  records" block surfacing the hand-curated ones (Hawley, Pelosi) above the roster. A "N sourced"
+  pill marks profiles that have documented records.
+
+### Changed
+- `candidates` gains `bioguide_id` (unique), `chamber`, and a `source` tag ('manual' vs
+  'congress_import'). Hand-curated rows are backfilled with their bioguide IDs and the import skips
+  them, so their attached sourced records are never clobbered.
+
+### Note
+- The import runs on the user's machine (sandbox can't reach api.congress.gov). Needs a free
+  Congress.gov API key + the Supabase service-role key. Until it's run, the page shows the 2 seeded
+  profiles; after, the full roster with the 2 still featured.
+
+---
+
 ## [0.18.0] — 2026-05-30 — Credibility pages (Charter + Our Sources)
 
 ### Added

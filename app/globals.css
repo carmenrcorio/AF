@@ -505,3 +505,13 @@ footer{background:var(--ink);color:var(--cream);padding:60px 0 34px}
 .src-tier-note{font-size:13.5px;color:var(--slate);margin-bottom:14px;font-style:italic}
 .src-chips{display:flex;flex-wrap:wrap;gap:9px}
 .src-chip{font-size:12.5px;font-weight:500;color:var(--ink);background:var(--parchment-2);border:1px solid var(--hair);padding:7px 13px;border-radius:2px}
+
+/* ============ SCORECARD BROWSER (535-member roster) ============ */
+.featured-block{margin-bottom:44px;padding-bottom:36px;border-bottom:2px solid var(--hair)}
+.score-filters{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:18px}
+.score-search{flex:1 1 240px;padding:11px 14px;border:1px solid var(--hair);background:var(--parchment-2);font-family:'Public Sans';font-size:14px;color:var(--ink)}
+.score-search:focus{outline:none;border-color:var(--gold)}
+.score-filters select{padding:11px 14px;border:1px solid var(--hair);background:var(--parchment-2);font-family:'Public Sans';font-size:14px;color:var(--ink);cursor:pointer}
+.score-filters select:focus{outline:none;border-color:var(--gold)}
+.score-count{font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--slate);font-weight:600;margin-bottom:18px}
+.rec-pill{margin-left:auto;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);background:rgba(176,141,76,.12);padding:3px 8px;border-radius:2px}
